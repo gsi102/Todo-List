@@ -1,0 +1,18 @@
+.sendButton {
+  position: relative;
+  width: 15%;
+  height: 100%;
+}
+
+.sendButton:before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  background: url("../assets/img/angle-down-solid.svg") no-repeat;
+  width: 3rem;
+  height: 3rem;
+  top: 20px;
+  left: 45%;
+  filter: invert(86%) sepia(0%) saturate(616%) hue-rotate(81deg) brightness(98%)
+    contrast(97%);
+}

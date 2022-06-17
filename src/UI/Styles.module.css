@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-Light.eot");
+  src: local("./assets/fonts/Montserrat/Montserrat Light"),
+    local("./assets/fonts/Montserrat/Montserrat-Light"),
+    url("./assets/fonts/Montserrat/Montserrat-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/Montserrat/Montserrat-Light.woff") format("woff"),
+    url("./assets/fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: lightgray;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: purple;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  display: block;
+  background: purple;
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color: white;
+  width: 700px;
+  height: 500px;
+}
+
+h1 {
+  text-align: center;
+  color: purple;
+  font-size: 8em;
+}
+
+.todoListContainer {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.addTask {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  border-bottom: 1px 2px lightgrey;
+}
+
+.todoList {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.taskItemActive,
+.taskItemCompleted {
+  display: flex;
+  flex-direction: row;
+  padding: 0 15px;
+  min-height: 20%;
+  width: 100%;
+  box-shadow: 1px 1px 3px rgb(211, 211, 211, 0.5);
+}
+
+.taskItemActive:hover,
+.taskItemCompleted:hover {
+  cursor: pointer;
+}
+
+.taskItemCompleted {
+  color: rgb(211, 211, 211, 0.7);
+  text-decoration: line-through hsla(0, 0%, 83%, 0.7);
+}
+
+.taskToggle {
+  position: relative;
+  width: 15%;
+}
+
+.taskToggle:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid rgb(211, 211, 211, 0.5);
+  bottom: 20%;
+  left: 20%;
+}
+
+.taskToggleActive:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: url("./assets/img/check-solid.svg") no-repeat;
+  width: 4rem;
+  height: 4rem;
+  bottom: 20%;
+  left: 25%;
+  transition: all 0.3s ease-in-out;
+  filter: invert(34%) sepia(71%) saturate(1538%) hue-rotate(125deg)
+    brightness(101%) contrast(101%);
+}
+
+.taskBody {
+  width: 85%;
+  font-size: 1.6rem;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-top: 1px solid lightgray;
+}
+
+.footerItem {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footerButton,
+.footerButtonActive {
+  padding: 5px;
+  height: 50%;
+  display: block;
+  text-align: center;
+}
+
+.footerButtonActive {
+  border-radius: 10px;
+  border: 1px solid rgb(255, 127, 80, 0.3);
+}
+
+.footerButton:hover {
+  cursor: pointer;
+}
